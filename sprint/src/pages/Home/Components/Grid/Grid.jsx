@@ -14,7 +14,6 @@ export default function Grid() {
               <figure className={`color${i}`}>
                 <img src={n.imgSrc} alt="category" />
                 <figcaption>
-                  {/* <a href="#">{n.categoryName}</a> */}
                   <p
                     onClick={() => {
                       navigate('/category')

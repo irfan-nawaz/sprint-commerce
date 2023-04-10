@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../../components/Navbar/Navbar'
 import './Cart.css'
-import Product from './Components/Product/Product'
+import CartList from './Components/CartList/CartList'
 import Order from './Components/Order/Order'
 
 export default function Cart() {
@@ -9,7 +9,7 @@ export default function Cart() {
     <>
       <NavBar />
       <div className="cart">
-        <Product />
+        <CartList />
         <Order />
       </div>
     </>

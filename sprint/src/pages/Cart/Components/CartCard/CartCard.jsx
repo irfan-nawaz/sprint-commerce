@@ -1,15 +1,16 @@
 import React from 'react'
-import img from '../../../../assets/img/mensT1.jpg'
 
-export default function Product() {
+export default function CartCard({
+  data: { _id, price, imgSrc, title, categoryName },
+}) {
   return (
     <section class="product">
       <figure class="product-content">
-        <img src={img} alt="shoes" />
+        <img src={imgSrc} alt="shoes" />
         <figcaption>
-          <h4>Soft and Smooth</h4>
-          <h3>Nike Air Max</h3>
-          <p>₹4999</p>
+          <h4>{categoryName}</h4>
+          <h3>{title}</h3>
+          <p>₹{price}</p>
           <div class="order-details">
             <h5>Qty: </h5>
             <i class="fas fa-plus" onclick="button1()"></i>
