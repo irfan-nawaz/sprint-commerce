@@ -1,17 +1,16 @@
 import React from 'react'
 import NavBar from '../../components/Navbar/Navbar'
-import './Cart.css'
+import OrderSummaryCard from '../../components/Card/OrderSummaryCard/OrderSummaryCard'
 import CartList from './Components/CartList/CartList'
-import Order from './Components/Order/Order'
+import './Cart.css'
+
+import { products } from '../../backend/db/products'
 
 export default function Cart() {
   return (
     <>
       <NavBar />
-      <div className="cart">
-        <CartList />
-        <Order />
-      </div>
+      <CartList />
     </>
   )
 }

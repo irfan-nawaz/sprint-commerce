@@ -1,17 +1,18 @@
-import { createContext, useContext} from 'react';
+import { createContext, useContext } from 'react'
 
-import { products } from '../../backend/db/products';
 
-const ProductContext = createContext();
+import { filteredList } from '../../backend/db/filteredList'
+
+const ProductContext = createContext()
 
 const ProductProvider = ({ children }) => {
-    return(
-        <ProductContext.Provider value={products}>
-        {children}
-      </ProductContext.Provider>
-    )
+  return (
+    <ProductContext.Provider value={filteredList}>
+      {children}
+    </ProductContext.Provider>
+  )
 }
 
-const useProducts = () => useContext(ProductContext);
+const useProducts = () => useContext(ProductContext)
 
-export { ProductProvider, useProducts };
+export { ProductProvider, useProducts }

@@ -1,14 +1,14 @@
 import React from 'react'
-import ProductCard from '../../../../components/Card/ProductCard'
+import ProductCard from '../../../../components/Card/ProductCard/ProductCard'
 import { useProducts } from '../../../../context/product/productContext'
 
 export default function ProductList() {
-  const products = useProducts()
+  const filteredList = useProducts()
   return (
     <div class="products-container">
       <section id="cards">
-        <div class="articlewrap">
-          {products.map((data) => (
+        <div className="articlewrap">
+          {filteredList.map((data) => (
             <ProductCard data={data} />
           ))}
         </div>

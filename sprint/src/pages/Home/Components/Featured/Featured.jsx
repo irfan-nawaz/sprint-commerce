@@ -1,5 +1,3 @@
-import React from 'react'
-// import '../../Home.css'
 import img from '../../../../assets/banners/artiom-vallat-CHKaD8uRaDU-unsplash.jpg'
 
 export default function Featured() {

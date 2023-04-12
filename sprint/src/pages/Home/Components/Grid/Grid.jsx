@@ -1,9 +1,11 @@
 import React from 'react'
 import { categories } from '../../../../backend/db/categories'
 import { useNavigate } from 'react-router-dom'
+import { useFilter } from '../../../../context/filter/filterContext'
 
 export default function Grid() {
   const navigate = useNavigate()
+  const filter = useFilter()
   return (
     <div>
       <section class="collections">
@@ -17,6 +19,7 @@ export default function Grid() {
                   <p
                     onClick={() => {
                       navigate('/category')
+                      filter.filterCategory(n.categoryName)
                     }}
                   >
                     {n.categoryName}
