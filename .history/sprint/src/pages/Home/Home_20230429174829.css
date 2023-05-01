@@ -1,0 +1,130 @@
+@import url("https://ui-view.netlify.app/components/avatar/avatar.css");
+@import url("https://ui-view.netlify.app/components/badge/badge.css");
+@import url("https://ui-view.netlify.app/components/button/button.css");
+@import url("https://ui-view.netlify.app/components/input/input.css");
+@import url("https://ui-view.netlify.app/components/navbar/navbar.css");
+@import url("https://ui-view.netlify.app/main.css");
+
+/* colors for home page */
+:root {
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #3d9397;
+    --color4: #94d28d;
+    --color5: #e9d8a6;
+    --color6: #ee9800;
+    --color7: #ca6702;
+    --color8: #bb3e03;
+    --color9: #ae2012;
+    --color10: #9b2226;
+    --color11: rgba(255, 255, 255, 0.8);
+}
+/* common styles that will be used for the HTML tags */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+figure {
+    margin: 0;
+}
+
+#featured figure{
+    width: 100%;
+    margin: auto;
+}
+
+
+/* mission styles */
+
+.missiontext svg {
+    /* margin-top: 5px; */
+    width: 90%;
+}
+
+.missiontext {
+    display: block;
+    line-height: 1.7;
+}
+
+.missionimg {
+    display: block;
+}
+
+#featured{
+    margin-bottom: 3rem;
+}
+
+/* declaring different borser styles to figures */
+
+@media (min-width: 550px) {
+
+    .missiontext {
+        display: flow-root;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .missiontext figure {
+        flex-basis: 32.5%;
+        order: 1;
+    }
+    .missiontext svg {
+        width: 100%;
+    }
+    .missiontext p {
+        flex-basis: 65.5%;
+        order: 2;
+    }
+}
+
+@media (min-width: 800px) {
+    section h2 {
+        margin-left: 100px;
+    }
+    .missiontext {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #mission .missiontext {
+        flex-basis: 64.5%;
+    }
+    #mission figure {
+        flex-basis: 32.5%;
+    }
+    #featured > figure > a > img{
+        height:100%;
+        width: 100%;
+        object-fit:fill;
+        margin-top:-13%;
+        cursor: pointer;
+    }
+    #hero img{
+        height: 60vh;
+        padding: 0rem 5rem;
+        background-color:black;
+    }
+}
